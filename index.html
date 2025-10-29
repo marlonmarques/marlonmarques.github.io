@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Marlon Marques — Engenheiro de Software | Criador do Fácil Finance e Capital ERP | PHP/Laravel & Spring Boot">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Marlon Marques — Engenheiro de Software | Criador do Fácil Finance e Capital ERP | PHP/Laravel & Spring Boot">
   <title>Marlon Marques — Engenheiro de Software</title>
   <style>
     :root {
@@ -13,33 +15,56 @@
       --light: #f8fafc;
       --gray: #718096;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.7;
       color: var(--primary);
       background-color: #fff;
     }
+
     header {
       background: linear-gradient(135deg, var(--primary), #2c3e50);
       color: white;
       padding: 4rem 2rem;
       text-align: center;
     }
-    header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.25rem; color: #e2e8f0; max-width: 700px; margin: 0 auto; }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      color: #e2e8f0;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
     .container {
       max-width: 960px;
       margin: 3rem auto;
       padding: 0 1.5rem;
     }
-    section { margin-bottom: 3.5rem; }
+
+    section {
+      margin-bottom: 3.5rem;
+    }
+
     h2 {
       font-size: 2.1rem;
       margin-bottom: 1.5rem;
       color: var(--primary);
       position: relative;
     }
+
     h2:after {
       content: '';
       display: block;
@@ -48,23 +73,30 @@
       background: var(--accent);
       margin-top: 0.5rem;
     }
+
     .products {
       display: grid;
       gap: 1.8rem;
     }
+
     .product {
       border: 1px solid #e2e8f0;
       border-radius: 10px;
       padding: 1.8rem;
       background: #fafbff;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
     }
+
     .product h3 {
       font-size: 1.5rem;
       color: var(--accent);
       margin-bottom: 0.8rem;
     }
-    .product p { margin-bottom: 1rem; }
+
+    .product p {
+      margin-bottom: 1rem;
+    }
+
     .result {
       background: #ebf8ff;
       padding: 1rem;
@@ -72,12 +104,14 @@
       margin: 1.2rem 0;
       font-style: italic;
     }
+
     .tech {
       display: flex;
       flex-wrap: wrap;
       gap: 0.6rem;
       margin: 1.2rem 0;
     }
+
     .tech span {
       background: #e6f0ff;
       color: var(--accent);
@@ -86,6 +120,7 @@
       font-size: 0.9rem;
       font-weight: 500;
     }
+
     footer {
       text-align: center;
       padding: 2.5rem;
@@ -93,11 +128,25 @@
       border-top: 1px solid #edf2f7;
       font-size: 1rem;
     }
-    a { color: var(--accent); text-decoration: none; font-weight: 600; }
-    a:hover { text-decoration: underline; }
-    .highlight { background: #fff9db; padding: 0.15rem 0.3rem; border-radius: 4px; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight {
+      background: #fff9db;
+      padding: 0.15rem 0.3rem;
+      border-radius: 4px;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Marlon Cândido Marques</h1>
@@ -108,15 +157,17 @@
     <section>
       <h2>Sobre</h2>
       <p>
-        Sou engenheiro de software e fundador técnico de duas plataformas SaaS que ajudam micro e pequenas empresas a 
+        Sou engenheiro de software e fundador técnico de duas plataformas SaaS que ajudam micro e pequenas empresas a
         <span class="highlight">substituir planilhas, automatizar processos fiscais e escalar com segurança</span>:
-        <a href="https://www.facilfinance.com.br" target="_blank">Fácil Finance</a> e 
+        <a href="https://www.facilfinance.com.br" target="_blank">Fácil Finance</a> e
         <a href="https://capitalerp.com.br" target="_blank">Capital ERP</a>.
       </p>
       <p>
-        Com mais de 4 anos de experiência em desenvolvimento backend, arquitetei sistemas completos em <strong>PHP com Laravel</strong>, 
-        utilizando boas práticas (SOLID, Clean Code, testes) e infraestrutura cloud. 
-        Atualmente, estou migrando serviços críticos para <strong>Spring Boot (Java)</strong> para aumentar escalabilidade e resiliência.
+        Com mais de 4 anos de experiência em desenvolvimento backend, arquitetei sistemas completos em <strong>PHP com
+          Laravel</strong>,
+        utilizando boas práticas (SOLID, Clean Code, testes) e infraestrutura cloud.
+        Atualmente, estou migrando serviços críticos para <strong>Spring Boot (Java)</strong> para aumentar
+        escalabilidade e resiliência.
       </p>
     </section>
 
@@ -124,60 +175,80 @@
       <h2>Produtos que Criei</h2>
       <div class="products">
         <div class="product">
-          <h3>Fácil Finance</h3>
-          <p>Sistema financeiro inteligente com fluxo de caixa, DRE, alertas e integração com escritórios contábeis.</p>
+          <h3>Fácil Finance & Capital ERP</h3>
+          <p>Plataformas SaaS multi-tenant para gestão financeira e emissão fiscal (NF-e, NFC-e, NFS-e), usadas por
+            centenas de empresas.</p>
           <div class="result">
-            ➤ Redução de <strong>70% no tempo de gestão financeira</strong> para centenas de empresas.
+            ➤ <strong>Redução de 70% no tempo de emissão de notas</strong> e automação completa de processos fiscais.
           </div>
-          <div class="tech">
-            <span>Laravel</span>
-            <span>MySQL</span>
-            <span>API REST</span>
-            <span>Cloud</span>
-            <span>Integração Contábil</span>
-          </div>
+          <p><strong>Infraestrutura:</strong> VPS Debian 12 + aaPanel, Nginx, PHP 8.2, MariaDB 10.7, Redis, OPcache.</p>
+          <p><strong>Otimização:</strong> Migração para <strong>Laravel Octane + RoadRunner</strong>, filas para
+            processamento pesado, índices no banco, uso de CPU estabilizado em <5% mesmo sob carga.</p>
+              <p><a href="https://www.facilfinance.com.br" target="_blank">Fácil Finance</a> | <a
+                  href="https://capitalerp.com.br" target="_blank">Capital ERP</a></p>
+              <p><a href="https://youtu.be/x2yrTgepngg" target="_blank">▶ Demo 1</a> |
+                <a href="https://youtu.be/azqJEgDlNyA" target="_blank">▶ Demo 2</a> |
+                <a href="https://youtu.be/NBpm8YPwy38" target="_blank">▶ Demo 3</a>
+              </p>
         </div>
 
         <div class="product">
-          <h3>Capital ERP</h3>
-          <p>ERP online completo com emissão de NF-e, NFC-e, NFS-e, frente de caixa, ordens de serviço e gestão financeira integrada.</p>
+          <h3>API de NFS-e com ACBr + Docker</h3>
+          <p>API REST em Lumen para emissão de Nota Fiscal de Serviço (NFS-e), resolvendo um dos maiores desafios do
+            ecossistema fiscal brasileiro: a fragmentação por município.</p>
           <div class="result">
-            ➤ <strong>Automação fiscal completa</strong> com arquivamento seguro de XMLs e envio por e-mail/WhatsApp.
+            ➤ Compilei as libs do <strong>ACBr</strong> no Linux, criei imagem Docker customizada e integrei com
+            PHP/Lumen + Swagger.
           </div>
-          <div class="tech">
-            <span>Laravel</span>
-            <span>MySQL</span>
-            <span>Web Services SEFAZ</span>
-            <span>Segurança</span>
-            <span>UX para não técnicos</span>
-          </div>
+          <p>Solução 100% funcional para leitura de certificado, comunicação com SEFAZ e geração de RPS/NFS-e.</p>
+          <p><a href="https://youtu.be/crDB2BbQLBE" target="_blank">▶ Vídeo da API em ação</a></p>
         </div>
       </div>
+    </section>
+
+    <section>
+      <h2>Engenharia de Observabilidade</h2>
+      <p>
+        Implementei um modelo leve e eficaz de observabilidade em meus SaaS, permitindo monitorar requisições, erros e
+        performance
+        sem sobrecarregar a aplicação. O sistema é compatível com Laravel Octane e funciona com apenas 2 novos arquivos.
+      </p>
+      <p>
+        Documentei todo o passo a passo em um repositório público com foco em estudos e reutilização:
+        <a href="https://lnkd.in/dr6iyRMb" target="_blank">Ver implementação no LinkedIn</a>.
+      </p>
     </section>
 
     <section>
       <h2>Tecnologias & Atualização</h2>
       <p>Minha stack evolui conforme a necessidade de escala e robustez:</p>
       <div class="tech">
-        <span>PHP 8+</span>
-        <span>Laravel 8–11</span>
-        <span>Java 17</span>
+        <span>PHP 8.2+</span>
+        <span>Laravel 11</span>
+        <span>Lumen</span>
         <span>Spring Boot</span>
-        <span>Spring Data JPA</span>
+        <span>Java 17</span>
         <span>MySQL / MariaDB</span>
-        <span>RESTful APIs</span>
-        <span>Git / GitHub</span>
+        <span>PostgreSQL</span>
         <span>Docker</span>
+        <span>Redis</span>
+        <span>Laravel Octane</span>
+        <span>RoadRunner</span>
+        <span>ACBr (Linux)</span>
+        <span>RESTful APIs</span>
+        <span>Swagger</span>
         <span>CI/CD</span>
-        <span>TDD (aprendendo)</span>
+        <span>Multi-Tenant</span>
+        <span>Observabilidade</span>
+        <span>Azure (em estudo)</span>
       </div>
     </section>
 
     <section>
       <h2>Próximos Passos</h2>
       <p>
-        Estou focado em me consolidar como <strong>desenvolvedor backend pleno/sênior em Java</strong>, 
-        contribuindo com APIs robustas, microsserviços e arquiteturas escaláveis — 
+        Estou focado em me consolidar como <strong>desenvolvedor backend pleno/sênior em Java</strong>,
+        contribuindo com APIs robustas, microsserviços e arquiteturas escaláveis —
         especialmente em ambientes de <span class="highlight">FinTech, SaaS ou startups de alto impacto</span>.
       </p>
     </section>
@@ -185,12 +256,12 @@
     <section>
       <h2>Contato</h2>
       <p>
-        🌐 <a href="https://github.com/marlonmarques" target="_blank">Portfólio</a>  
-        •  
-        💼 <a href="https://www.linkedin.com/in/marlon-marques-040942247" target="_blank">LinkedIn</a>  
-        •  
-        📧 marlonmarques6@gmail.com  
-        •  
+        🌐 <a href="https://marlonmarques.github.io/" target="_blank">Portfólio</a>
+        •
+        💼 <a href="https://www.linkedin.com/in/marlon-marques-040942247" target="_blank">LinkedIn</a>
+        •
+        📧 marlonmarques6@gmail.com
+        •
         💻 <a href="https://github.com/marlonmarques" target="_blank">GitHub</a>
       </p>
     </section>
@@ -200,4 +271,5 @@
     <p>© 2025 Marlon Marques — Engenheiro de Software | Transformando negócios com tecnologia</p>
   </footer>
 </body>
+
 </html>
