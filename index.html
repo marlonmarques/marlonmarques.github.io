@@ -3,222 +3,349 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Marlon Marques — Engenheiro de Software | Fundador do Fácil Finance e Capital ERP | PHP/Laravel & Spring Boot">
-  <title>Marlon Marques — Engenheiro de Software</title>
+  <meta name="description" content="Marlon Marques — Engenheiro de Software Sênior | Tech Lead | Arquitetura Distribuída | Java 21 & Spring Boot">
+  <title>Marlon Marques — Engenheiro de Software Sênior</title>
+
   <style>
     :root {
       --primary: #1a202c;
       --secondary: #2d3748;
       --accent: #3182ce;
+      --accent-java: #e76f00;
       --light: #f8fafc;
       --gray: #718096;
     }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.7;
       color: var(--primary);
       background-color: #fff;
     }
+
     header {
       background: linear-gradient(135deg, var(--primary), #2c3e50);
       color: white;
-      padding: 4rem 2rem;
+      padding: 5rem 2rem;
       text-align: center;
     }
-    header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.25rem; color: #e2e8f0; max-width: 700px; margin: 0 auto; }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.8rem;
+      letter-spacing: -1px;
+    }
+
+    header p {
+      font-size: 1.35rem;
+      color: #e2e8f0;
+      max-width: 900px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
     .container {
-      max-width: 960px;
-      margin: 3rem auto;
+      max-width: 1000px;
+      margin: 4rem auto;
       padding: 0 1.5rem;
     }
-    section { margin-bottom: 3.5rem; }
+
+    section { margin-bottom: 4.5rem; }
+
     h2 {
-      font-size: 2.1rem;
-      margin-bottom: 1.5rem;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
       color: var(--primary);
+      font-weight: 700;
       position: relative;
     }
-    h2:after {
+
+    h2::after {
       content: '';
       display: block;
-      width: 50px;
-      height: 3px;
+      width: 60px;
+      height: 4px;
       background: var(--accent);
-      margin-top: 0.5rem;
+      margin-top: 0.6rem;
+      border-radius: 2px;
     }
-    .products { display: grid; gap: 1.8rem; }
-    .product {
+
+    .products {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .card {
       border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 1.8rem;
-      background: #fafbff;
+      border-radius: 12px;
+      padding: 2rem;
+      background: #fff;
       box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .product h3 {
-      font-size: 1.5rem;
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
       color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .java-feature {
+      background: #fffaf5;
+      border: 1px solid #fed7aa;
+      border-left: 6px solid var(--accent-java);
+      position: relative;
+    }
+
+    .java-feature h3 { color: #c2410c; }
+
+    .java-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--accent-java);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 0.25rem 0.75rem;
+      border-radius: 99px;
+      text-transform: uppercase;
+    }
+
+    .case-study {
+      background: #f8fbff;
+      border-left: 6px solid var(--accent);
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+
+    .feature-list li {
       margin-bottom: 0.8rem;
+      padding-left: 1.8rem;
+      position: relative;
     }
-    .result {
-      background: #ebf8ff;
-      padding: 1rem;
-      border-left: 4px solid var(--accent);
-      margin: 1.2rem 0;
-      font-style: italic;
+
+    .feature-list li::before {
+      content: "→";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
     }
-    .tech {
+
+    .java-feature .feature-list li::before {
+      color: var(--accent-java);
+    }
+
+    .tech-stack {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem;
-      margin: 1.2rem 0;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
     }
-    .tech span {
-      background: #e6f0ff;
-      color: var(--accent);
-      padding: 0.3rem 0.9rem;
-      border-radius: 20px;
+
+    .tech-stack span {
+      background: white;
+      border: 1px solid #e2e8f0;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
       font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--secondary);
+    }
+
+    .result {
+      background: #edf2f7;
+      padding: 1.2rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
       font-weight: 500;
     }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+      margin-right: 0.5rem;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #000;
+    }
+
+    a.link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a.link:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
-      padding: 2.5rem;
+      padding: 4rem 2rem;
       color: var(--gray);
       border-top: 1px solid #edf2f7;
-      font-size: 1rem;
+      background: #fafafa;
+      font-size: 0.95rem;
     }
-    a { color: var(--accent); text-decoration: none; font-weight: 600; }
-    a:hover { text-decoration: underline; }
-    .highlight { background: #fff9db; padding: 0.15rem 0.3rem; border-radius: 4px; }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Marlon Cândido Marques</h1>
-    <p>Engenheiro de Software • Fundador Técnico de SaaS • PHP/Laravel • Spring Boot • FinTech & ERP</p>
-  </header>
 
-  <div class="container">
-    <section>
-      <h2>Sobre</h2>
-      <p>
-        Sou engenheiro de software e fundador técnico de duas plataformas SaaS que ajudam micro e pequenas empresas a
-        <span class="highlight">substituir planilhas, automatizar processos fiscais e escalar com segurança</span>:
-        <a href="https://www.facilfinance.com.br" target="_blank">Fácil Finance</a> e
-        <a href="https://capitalerp.com.br" target="_blank">Capital ERP</a>.
-      </p>
-      <p>
-        Com mais de 4 anos liderando produtos em produção, arquitetei sistemas completos em <strong>PHP com Laravel</strong>,
-        utilizando boas práticas (SOLID, Clean Code) e infraestrutura própria.
-        Atualmente, estou <strong>refatorando o Capital ERP para Spring Boot + Angular</strong> para aumentar escalabilidade e resiliência.
-      </p>
-      <p>
-        Busco atuar como Engenheiro Software em empresas que valorizem arquitetura robusta, escalabilidade e impacto real.
-      </p>
-    </section>
+<header>
+  <h1>Marlon Cândido Marques</h1>
+  <p>
+    Engenheiro de Software Sênior • Tech Lead • Arquitetura Distribuída • Java 21 & Spring Boot
+  </p>
 
-    <section>
-      <h2>Produtos que Criei</h2>
-      <div class="products">
-        <div class="product">
-          <h3>Fácil Finance</h3>
-          <p>Sistema financeiro inteligente com fluxo de caixa, DRE, alertas e integração com escritórios contábeis (FG Contadores, Exitum, Usabpo).</p>
-          <div class="result">
-            ➤ Redução de <strong>70% no tempo de gestão financeira</strong> para centenas de empresas.
-          </div>
-          <p><a href="https://youtu.be/NBpm8YPwy38" target="_blank">▶ Demo 1</a> | <a href="https://youtu.be/azqJEgDlNyA" target="_blank">▶ Demo 2</a> | <a href="https://youtu.be/crDB2BbQLBE" target="_blank">▶ Demo 3</a></p>
-        </div>
+  <div style="margin-top:2rem;">
+    <a href="https://github.com/marlonmarques" target="_blank" class="btn btn-primary">GitHub</a>
+    <a href="https://www.linkedin.com/in/marlon-marques-040942247" target="_blank" class="btn btn-primary">LinkedIn</a>
+  </div>
+</header>
 
-        <div class="product">
-          <h3>Capital ERP</h3>
-          <p>ERP online completo com emissão de NF-e, NFC-e, NFS-e, frente de caixa, ordens de serviço e gestão financeira integrada.</p>
-          <div class="result">
-            ➤ <strong>Automação fiscal 100% integrada</strong>, com envio por e-mail/WhatsApp e arquivamento seguro de XMLs.
-          </div>
-          <p><a href="https://youtu.be/x2yrTgepngg" target="_blank">▶ Demo do ERP</a></p>
-        </div>
+<div class="container">
 
-        <div class="product">
-          <h3>API de NF-e, NFC-e e NFS-e com ACBr + Docker</h3>
-          <p>API REST em Lumen para emissão de Nota Fiscal Eletrônica (NF-e), Cupom Fiscal Eletrônico (NFC-e) e Nota Fiscal de Serviço (NFS-e), resolvendo a fragmentação municipal com uma única interface.</p>
-          <div class="result">
-            ➤ Compilei as libs do <strong>ACBr</strong> no Linux, criei imagem Docker customizada e integrei com PHP/Lumen + Swagger.
-          </div>
-          <p><a href="https://youtu.be/0BMfMjFhsLw" target="_blank">▶ Vídeo da API em ação</a></p>
-        </div>
-      </div>
-    </section>
+  <section>
+    <h2>Resumo Profissional</h2>
+    <p>
+      Sou Engenheiro de Software Sênior e Tech Lead com atuação prática em arquitetura,
+      desenvolvimento e operação de sistemas críticos em produção,
+      especialmente nos domínios financeiro, fiscal e ERP.
+    </p>
+    <p>
+      Tenho histórico comprovado de modernização de sistemas legados,
+      migração de mais de <strong>100 bases de dados</strong> para PostgreSQL,
+      redução de latência em até <strong>60%</strong> e consolidação de infraestrutura
+      com Docker e <strong>PaaS self-hosted (Coolify)</strong>.
+    </p>
+  </section>
 
-    <section>
-      <h2>Migração para Java: Backend do Capital ERP com Spring Boot + Angular</h2>
+  <section>
+    <h2>Engenharia & Arquitetura</h2>
+
+    <div class="card java-feature">
+      <span class="java-badge">Arquitetura de Referência</span>
+      <h3>Capital ERP — Backend de Nova Geração</h3>
+
       <p>
-        A migração estratégica do <strong>Capital ERP</strong> para uma arquitetura moderna está em pleno andamento. O backend está sendo reconstruído em 
-        <strong>Spring Boot (Java 21+)</strong>, com foco total em qualidade, TDD e arquitetura robusta.
+        Reescrita estratégica do núcleo do ERP utilizando
+        <strong>Java 21 e Spring Boot 3</strong>,
+        com foco em escalabilidade, qualidade e isolamento de domínio.
       </p>
-      <p>
-        Arquitetura baseada em Domain-Driven Design (DDD), com camadas de serviço, domínio e infraestrutura claramente segregadas.
-      </p>
-      <p>
-        O primeiro módulo (Clientes) já está 100% funcional, incluindo:
-      </p>
-      <ul style="margin-left: 20px; margin-bottom: 1.2rem;">
-        <li>API RESTful completa (CRUD) documentada e testada.</li>
-        <li>Cobertura total de testes de controlador com <strong>TDD (@WebMvcTest + Mockito)</strong>.</li>
-        <li>Arquitetura Multi-Database (PostgreSQL para dados transacionais e SQLite para dados comuns).</li>
+
+      <ul class="feature-list">
+        <li>Domain-Driven Design (DDD)</li>
+        <li>Clean Architecture (Ports & Adapters)</li>
+        <li>TDD com JUnit 5 e Mockito</li>
+        <li>Multi-database e multi-tenant via PostgreSQL Schemas</li>
       </ul>
-      <p>
-        Este é um projeto vivo. Você pode <strong>acompanhar o progresso técnico no GitHub</strong> (onde os testes e o código estão) ou <strong>ver a jornada de desenvolvimento no meu LinkedIn</strong>.
-      </p>
-      <p>
-        <a href="https://github.com/marlonmarques/capitaerp_spring" target="_blank"><strong>Ver o Código e Testes no GitHub</strong></a>
-        •
-        <a href="https://www.linkedin.com/in/marlon-marques-040942247/" target="_blank">Acompanhar no LinkedIn</a>
-      </p>
-    </section>
 
-    <section>
-      <h2>Tecnologias</h2>
-      <div class="tech">
-        <span>PHP 8.2+</span>
-        <span>Laravel 11</span>
-        <span>Lumen</span>
-        <span>Spring Boot</span>
-        <span>Java 21+</span>
-        <span>Angular</span>
-        <span>MySQL / MariaDB</span>
+      <div class="tech-stack">
+        <span>Java 21</span>
+        <span>Spring Boot 3</span>
         <span>PostgreSQL</span>
         <span>Docker</span>
-        <span>Redis</span>
-        <span>Laravel Octane</span>
-        <span>RoadRunner</span>
-        <span>ACBr (Linux)</span>
-        <span>RESTful APIs</span>
-        <span>Swagger</span>
-        <span>CI/CD</span>
-        <span>Multi-Tenant</span>
-        <span>Observabilidade</span>
-        <span>Azure (em estudo)</span>
+        <span>OpenAPI</span>
       </div>
-    </section>
 
-    <section>
-      <h2>Contato</h2>
+      <div style="margin-top:1.5rem;">
+        <a href="https://github.com/marlonmarques/capitaerp_spring" target="_blank" class="btn btn-primary">
+          Ver código no GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Case de Sucesso: Migração & Escala</h2>
+
+    <div class="card case-study">
+      <h3>Migração Multi-Tenant MySQL → PostgreSQL</h3>
+
       <p>
-        🌐 <a href="https://marlonmarques.github.io" target="_blank">Portfólio</a>
-        •
-        💼 <a href="https://www.linkedin.com/in/marlon-marques-040942247" target="_blank">LinkedIn</a>
-        •
-        📧 marlonmarques6@gmail.com
-        •
-        💻 <a href="https://github.com/marlonmarques" target="_blank">GitHub</a>
+        Migração crítica de ambiente de produção envolvendo mais de
+        <strong>100 tenants</strong>, consolidando bancos isolados em um
+        cluster PostgreSQL utilizando <strong>schema por tenant</strong>.
       </p>
-    </section>
-  </div>
 
-  <footer>
-    <p>© 2025 Marlon Marques — Engenheiro de Software | Transformando negócios com tecnologia</p>
-  </footer>
+      <ul class="feature-list">
+        <li>Scripts automatizados com pgloader</li>
+        <li>Container intermediário MySQL 5.7 (ponte de compatibilidade)</li>
+        <li>Processo reexecutável e validado</li>
+        <li>Infraestrutura containerizada com Docker e Coolify</li>
+      </ul>
+
+      <div class="result">
+        <strong>Resultado:</strong> redução de latência, simplificação operacional
+        e base pronta para crescimento horizontal.
+      </div>
+
+      <p>
+        <a href="https://github.com/marlonmarques/database-migration-case" target="_blank" class="link">
+          Ver documentação técnica completa da migração →
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Produtos em Produção</h2>
+
+    <div class="products">
+      <div class="card">
+        <h3>Fácil Finance</h3>
+        <p>Plataforma SaaS de gestão financeira para PMEs.</p>
+        <a href="https://www.facilfinance.com.br" target="_blank" class="link">Visitar site →</a>
+      </div>
+
+      <div class="card">
+        <h3>Capital ERP</h3>
+        <p>ERP fiscal e financeiro multi-tenant.</p>
+        <a href="https://capitalerp.com.br" target="_blank" class="link">Visitar site →</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contato</h2>
+    <p>Aberto a oportunidades como Engenheiro de Software Sênior ou Tech Lead.</p>
+    <p style="margin-top:1rem;">
+      <a href="mailto:marlonmarques6@gmail.com" class="link">📧 marlonmarques6@gmail.com</a><br>
+      <a href="https://www.linkedin.com/in/marlon-marques-040942247" target="_blank" class="link">💼 LinkedIn</a>
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  © 2025 Marlon Marques — Engenharia de Software aplicada a sistemas reais.
+</footer>
+
 </body>
 </html>
